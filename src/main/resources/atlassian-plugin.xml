@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<atlassian-plugin key="${atlassian.plugin.key}"
+	name="${project.name}" plugins-version="2">
+	<plugin-info>
+		<description>${project.description}</description>
+		<version>${project.version}</version>
+		<vendor name="${project.organization.name}"
+			url="${project.organization.url}" />
+		<param name="plugin-icon">images/pluginIcon.png</param>
+		<param name="plugin-logo">images/pluginLogo.png</param>
+	</plugin-info>
+
+	<repository-hook key="prisma-pre-repository-hook"
+		name="Prisma Pre Repository Hook"
+		class="com.atlassian.bitbucket.server.hook.PrismaPreRepositoryHook">
+		<description key="prisma-pre-repository-hook.description">The Prisma Pre Repository Hook Plugin
+		</description>
+		<icon>icon-example.png</icon>
+	</repository-hook>
+
+	<repository-hook key="prisma-post-repository-hook"
+		name="Prisma Post Repository Hook"
+		class="com.atlassian.bitbucket.server.hook.PrismaPostRepositoryHook">
+		<description key="prisma-post-repository-hook.description">The Prisma Post Repository Hook Plugin
+		</description>
+		<icon>icon-example.png</icon>
+		<config-form name="Prisma Post Repository Hook Config"
+			key="prisma-post-repository-hook-config">
+			<view>com.atlassian.bitbucket.server.hook.prismapostrepositoryhook.view
+			</view>
+			<directory location="/static/" />
+		</config-form>
+
+		<scopes>
+			<scope>project</scope>
+			<scope>repository</scope>
+		</scopes>
+	</repository-hook>
+
+	<repository-hook key="prisma-merge-repository-hook"
+		name="Prisma Merge Repository Hook"
+		class="com.atlassian.bitbucket.server.hook.PrismaMergeRepositoryHook">
+		<description
+			key="prisma-merge-repository-hook.description">The Prisma Merge Repository Hook Plugin</description>
+		<icon>icon-example.png</icon>
+		<config-form name="Prisma Merge Repository Hook Config"
+			key="prisma-merge-repository-hook-config">
+			<view>com.atlassian.bitbucket.server.hook.prismamergerepositoryhook.view
+			</view>
+			<directory location="/static/" />
+		</config-form>
+
+		<scopes>
+			<scope>project</scope>
+			<scope>repository</scope>
+		</scopes>
+	</repository-hook>
+
+</atlassian-plugin>
