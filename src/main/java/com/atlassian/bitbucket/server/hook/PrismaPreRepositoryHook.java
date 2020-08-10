@@ -23,7 +23,7 @@ public class PrismaPreRepositoryHook implements PreReceiveRepositoryHook {
 		boolean isAfter4pm = now.get(Calendar.HOUR_OF_DAY) > 16;
 
 		if (isFriday && isAfter4pm) {
-			hookResponse.err().println("you cant push changes after 4am on friday");
+			hookResponse.err().println("you cant push changes after 4am on friday done");
 			return false;
 		}
 		hookResponse.out().println("success");

@@ -31,11 +31,7 @@
 			</view>
 			<directory location="/static/" />
 		</config-form>
-
-		<scopes>
-			<scope>project</scope>
-			<scope>repository</scope>
-		</scopes>
+	
 	</repository-hook>
 
 	<repository-hook key="prisma-merge-repository-hook"
@@ -50,7 +46,6 @@
 			</view>
 			<directory location="/static/" />
 		</config-form>
-
 		<scopes>
 			<scope>project</scope>
 			<scope>repository</scope>

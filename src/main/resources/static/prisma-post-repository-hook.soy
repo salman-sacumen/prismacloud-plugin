@@ -5,11 +5,32 @@
  * @param? errors
  */
 {template .view}
+   {call aui.form.textField}
+        {param id: 'allowedhighcount' /}
+        {param value: $config ? $config['allowedhighcount'] : null /}
+        {param labelContent: 'allowedhighcount'  /}
+        {param descriptionText: 'Allowed high count' /}
+        {param errorTexts: $errors ? $errors['allowedhighcount'] : null /}
+    {/call}
     {call aui.form.textField}
-        {param id: 'url' /}
-        {param value: $config ? $config['url'] : null /}
-        {param labelContent: 'url'  /}
-        {param descriptionText: 'Some description for url' /}
-        {param errorTexts: $errors ? $errors['url'] : null /}
+        {param id: 'allowedmediumcount' /}
+        {param value: $config ? $config['allowedmediumcount'] : null /}
+        {param labelContent: 'allowedmediumcount'  /}
+        {param descriptionText: 'Allowed medium count' /}
+        {param errorTexts: $errors ? $errors['allowedmediumcount'] : null /}
+    {/call}
+    {call aui.form.textField}
+        {param id: 'allowedlowcount' /}
+        {param value: $config ? $config['allowedlowcount'] : null /}
+        {param labelContent: 'allowedlowcount'  /}
+        {param descriptionText: 'Allowed low count' /}
+        {param errorTexts: $errors ? $errors['allowedlowcount'] : null /}
+    {/call}
+    {call aui.form.textField}
+        {param id: 'allowoperator' /}
+        {param value: $config ? $config['allowoperator'] : null /}
+        {param labelContent: 'Operator'  /}
+        {param descriptionText: 'Condition Operation' /}
+        {param errorTexts: $errors ? $errors['allowoperator'] : null /}
     {/call}
 {/template}
