@@ -10,7 +10,6 @@
 		<param name="plugin-icon">images/pluginIcon.png</param>
 		<param name="plugin-logo">images/pluginLogo.png</param>
 	</plugin-info>
-
 	<repository-hook key="prisma-pre-repository-hook"
 		name="Prisma Pre Repository Hook"
 		class="com.atlassian.bitbucket.server.hook.PrismaPreRepositoryHook">
@@ -18,7 +17,6 @@
 		</description>
 		<icon>icon-example.png</icon>
 	</repository-hook>
-
 	<repository-hook key="prisma-post-repository-hook"
 		name="Prisma Post Repository Hook"
 		class="com.atlassian.bitbucket.server.hook.PrismaPostRepositoryHook">
@@ -31,9 +29,11 @@
 			</view>
 			<directory location="/static/" />
 		</config-form>
-	
+		<scopes>
+			<scope>project</scope>
+			<scope>repository</scope>
+		</scopes>
 	</repository-hook>
-
 	<repository-hook key="prisma-merge-repository-hook"
 		name="Prisma Merge Repository Hook"
 		class="com.atlassian.bitbucket.server.hook.PrismaMergeRepositoryHook">
@@ -51,5 +51,12 @@
 			<scope>repository</scope>
 		</scopes>
 	</repository-hook>
-
+	<resource type="i18n" name="i18n"
+		location="${atlassian.plugin.key}" />
+	<web-item name="Prisma" i18n-name-key="prisma.name"
+		key="prisma" section="system.admin/globalsettings" weight="1000">
+		<description key="prisma.description">The Prisma Plugin</description>
+		<label key="prisma.label"></label>
+		<link linkId="prisma-link">/secure/CreateIssue!default.jspa</link>
+	</web-item>
 </atlassian-plugin>
