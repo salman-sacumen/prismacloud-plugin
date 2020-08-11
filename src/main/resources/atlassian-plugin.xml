@@ -2,6 +2,7 @@
 
 <atlassian-plugin key="${atlassian.plugin.key}"
 	name="${project.name}" plugins-version="2">
+
 	<plugin-info>
 		<description>${project.description}</description>
 		<version>${project.version}</version>
@@ -31,7 +32,10 @@
 			</view>
 			<directory location="/static/" />
 		</config-form>
-	
+		<scopes>
+			<scope>project</scope>
+			<scope>repository</scope>
+		</scopes>
 	</repository-hook>
 
 	<repository-hook key="prisma-merge-repository-hook"
@@ -51,5 +55,13 @@
 			<scope>repository</scope>
 		</scopes>
 	</repository-hook>
+
+	<web-item name="Prisma" i18n-name-key="prisma.name"
+		key="prisma" section="system.admin/globalsettings" weight="1000">
+		<description key="prisma.description">The Prisma Plugin</description>
+		<label key="prisma.label"></label>
+		<link linkId="prisma-link">/secure/CreateIssue!default.jspa</link>
+	</web-item>
+
 
 </atlassian-plugin>
