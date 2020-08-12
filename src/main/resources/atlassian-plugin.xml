@@ -56,12 +56,18 @@
 		</scopes>
 	</repository-hook>
 
-	<web-item name="Prisma" i18n-name-key="prisma.name"
-		key="prisma" section="system.admin/globalsettings" weight="1000">
+<!-- 	<web-item name="Prisma" key="prisma" -->
+<!-- 		section="system.admin/globalsettings" weight="1000"> -->
+<!-- 		<description key="prisma.description">The Prisma Plugin</description> -->
+<!-- 		<label key="prisma.label"></label> -->
+<!-- 		<link linkId="prisma-link">/secure/CreateIssue!default.jspa</link> -->
+<!-- 	</web-item> -->
+
+	<web-item key="prisma" name="Prisma"
+		section="system.admin/example1" weight="1000">
 		<description key="prisma.description">The Prisma Plugin</description>
 		<label key="prisma.label"></label>
 		<link linkId="prisma-link">/secure/CreateIssue!default.jspa</link>
 	</web-item>
-
 
 </atlassian-plugin>
